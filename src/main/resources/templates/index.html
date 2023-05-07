@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Загрузка файла TXT</title>
+</head>
+<body>
+<h1>Загрузите файл TXT</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="file" id="file">
+  <br><br>
+  <button type="submit">Отправить</button>
+</form>
+<hr>
+<h2>Введите число:</h2>
+<form action="/search" method="get">
+  <input type="number" name="number">
+  <br><br>
+  <button type="submit">Найти индекс</button>
+</form>
+<hr>
+<h2>Индекс числа:<p th:text="${index}"></p></h2>
+<p>(-1 - книга отсутсвует)</p>
+
+</body>
+</html>
