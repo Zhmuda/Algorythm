@@ -99,4 +99,22 @@ public class TxtController {
         return -1; // Число не найдено
     }
 
+    public static int exponentialSearch(Integer[] arr, int target) {
+        Arrays.sort(arr);
+        int kol_operation = 0;  //счетчик
+
+        int n = arr.length;
+        if (arr[0] == target) {
+            return 0;
+        }
+        int i = 1;
+        while (i < n && arr[i] <= target) {
+            kol_operation += 1;
+            System.out.println(kol_operation);
+            i = i * 2;
+        }
+        return Arrays.binarySearch(arr, i / 2, Math.min(i, n), target);
+    }
+
+
 }
